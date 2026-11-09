@@ -1,0 +1,25 @@
+Keystead
+Copyright 2026 leeAhwi
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes third-party software:
+
+- Argon2 reference implementation (macos/Sources/CArgon2)
+  https://github.com/P-H-C/phc-winner-argon2, tag 20190702
+  Dual licensed CC0 1.0 Universal / Apache License 2.0. Unmodified; SHA-256 of every file in VENDORED.md.
+
+- Rust crates bundled into the Windows app (windows/src-tauri/Cargo.lock lists exact versions), among them
+  tauri, tauri-plugin-global-shortcut, wry, tao (MIT OR Apache-2.0),
+  argon2, aes-gcm, hkdf, hmac, sha1, sha2, zeroize, subtle (RustCrypto, MIT OR Apache-2.0),
+  serde, serde_json, base64, data-encoding, unicode-normalization, keyring, qrcode, open, windows-sys
+  (MIT and/or Apache-2.0).
+
+- Python packages used by the reference implementation (uv.lock lists exact versions):
+  cryptography (Apache-2.0 OR BSD-3-Clause), argon2-cffi (MIT), pyotp (MIT).
+
+- Apple frameworks (CryptoKit, Security, SwiftUI, AppKit) and Microsoft Windows APIs are used through
+  the operating system and are not redistributed.
+
+Full license texts for the Rust crates can be produced with `cargo about` or `cargo license` in
+windows/src-tauri; for Python packages with `uv pip licenses` style tooling.

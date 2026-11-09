@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keystead — your passwords stay on your computer</title>
+<meta name="description" content="A password manager with no server and no account. The vault is one encrypted file on your computer, and the Mac and Windows apps open the same file.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16181D" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="canonical" href="https://leeahwi.github.io/keystead/en/">
+<link rel="alternate" hreflang="ko" href="https://leeahwi.github.io/keystead/">
+<link rel="alternate" hreflang="en" href="https://leeahwi.github.io/keystead/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keystead — your passwords stay on your computer">
+<meta property="og:description" content="No server, no account. The Mac and Windows apps open the same encrypted vault file.">
+<meta property="og:url" content="https://leeahwi.github.io/keystead/en/">
+<meta name="twitter:card" content="summary">
+<script>(function(d){d.className=d.className.replace("no-js","js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}})(document.documentElement)</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Keystead home"><img src="../assets/logo.svg" alt="" width="30" height="30">Keystead</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#tour">Tour</a>
+      <a href="#start">Get started</a>
+      <a href="#security">Security</a>
+      <a href="#backup">Backup</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/leeahwi/keystead">GitHub</a>
+    </nav>
+    <div class="tools">
+      <div class="theme" role="group" aria-label="Color theme">
+        <button type="button" data-theme-set="auto" aria-pressed="true" title="Follow the system"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg><span class="sr">Follow the system</span></button>
+        <button type="button" data-theme-set="light" aria-pressed="false" title="Light"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2.8"/><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1"/></svg><span class="sr">Light</span></button>
+        <button type="button" data-theme-set="dark" aria-pressed="false" title="Dark"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.6A5.6 5.6 0 0 1 6.4 2.5a5.6 5.6 0 1 0 7.1 7.1z"/></svg><span class="sr">Dark</span></button>
+      </div>
+      <a class="lang" href="../" hreflang="ko" lang="ko">한국어</a>
+      <a class="btn primary small" href="#download">Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <a class="badge" href="https://github.com/leeahwi/keystead/releases/latest"><span class="dot" aria-hidden="true"></span>New in 0.8.0 · Windows Hello<span class="go" aria-hidden="true">→</span></a>
+      <img class="mark" src="../assets/logo.svg" alt="" width="76" height="76">
+      <h1 id="hero-title">Your passwords stay <em>on your computer</em></h1>
+      <p class="lede">No server, no account, no sync. The vault is one encrypted file on your machine, and the Mac and Windows apps open the same file.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/leeahwi/keystead/releases/latest">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>
+          Download <small>0.9.0</small>
+        </a>
+        <div class="line" role="img" aria-label="Quick search example: press ⇧⌥Space in any app, type ‘git’, and ↵ copies the GitHub password" data-line='[["git","Copy GitHub password ↵"],["aws","Copy AWS console password ↵"],["fig","Copy Figma password ↵"]]'>
+          <kbd aria-hidden="true">⇧⌥Space</kbd>
+          <span class="typed" aria-hidden="true">git</span>
+          <span class="chip" aria-hidden="true">Copy GitHub password ↵</span>
+        </div>
+      </div>
+      <p class="alt">macOS 14+ · Windows 10/11 · Apache License 2.0 · The app UI is in Korean</p>
+    </div>
+  </section>
+
+  <section class="film" aria-label="Keystead intro film">
+    <div class="wrap reveal">
+      <div class="stage">
+        <div class="film-frame">
+          <video class="film-video" data-film src="../assets/promo-en.mp4" poster="../assets/promo-en.jpg" width="1280" height="720" muted loop playsinline autoplay preload="metadata" aria-label="Keystead intro film showing quick search and unlocking with real app screens. No sound."></video>
+          <button class="film-toggle" type="button" data-film-toggle aria-label="Pause the film" data-label-pause="Pause the film" data-label-play="Play the film"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><rect x="4" y="3" width="3" height="10" rx="1"/><rect x="9" y="3" width="3" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tour" aria-labelledby="tour-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Tour</p>
+        <h2 id="tour-title">One screen at a time</h2>
+      </div>
+      <div class="reveal" data-tabs>
+        <div class="stage">
+          <div class="slides">
+            <article class="slide wide" id="s-main" role="tabpanel" aria-labelledby="t-main">
+              <div>
+                <p class="kicker">01 · Vault</p>
+                <h3>The biggest button copies the password</h3>
+                <p>The window opens with the cursor in the search box. Type two or three letters and <kbd>↵</kbd> copies the password.</p>
+                <p>Each entry starts with one blue button that copies the password. Below it sit username, the current <span class="nowrap">one-time</span> code and a button that opens the site.</p>
+              </div>
+              <figure class="shot">
+                <picture>
+                  <source data-dark srcset="../assets/shots/main-dark.webp" media="(prefers-color-scheme: dark)">
+                  <img src="../assets/shots/main.webp" width="1600" height="1040" alt="Keystead main window: the all-entries menu, search box and filter chips over the entry list on the left; on the right the GitHub entry with one blue copy-password button, then username, one-time code 707 388 and open-site, and the username, password and website fields. The bottom bar shows time until lock and a lock button">
+                </picture>
+              </figure>
+            </article>
+            <article class="slide" id="s-quick" role="tabpanel" aria-labelledby="t-quick" hidden>
+              <div>
+                <p class="kicker">02 · Quick search</p>
+                <h3><span class="nowrap">⇧⌥Space</span> from any app</h3>
+                <p>A small window opens on top of whatever you're using. Narrow it with the space chips, pick with <kbd>↑</kbd><kbd>↓</kbd>, and <kbd>↵</kbd> copies the password.</p>
+                <p>Copied values are cleared after 20 seconds. On Windows the shortcut is <kbd>Alt+Shift+Space</kbd>.</p>
+              </div>
+              <figure class="shot"><img src="../assets/shots/quick.webp" width="1280" height="1114" loading="lazy" alt="Quick search window: a search box and space chips (all, work, personal, other) on top, results with AWS console selected, and at the bottom a copy-password button with username and OTP buttons, plus a note that copied values are cleared after 20 seconds"></figure>
+            </article>
+            <article class="slide" id="s-unlock" role="tabpanel" aria-labelledby="t-unlock" hidden>
+              <div>
+                <p class="kicker">03 · Unlock in quick search</p>
+                <h3>Locked? Unlock right there</h3>
+                <p>No trip to the main window. Quick search asks for the master password, then the phone code, and goes straight to search once it's open. On a Mac, Touch ID can stand in for the master password.</p>
+              </div>
+              <div class="pair">
+                <figure class="shot">
+                  <picture>
+                    <source data-dark srcset="../assets/shots/quick-locked-dark.webp" media="(prefers-color-scheme: dark)">
+                    <img src="../assets/shots/quick-locked.webp" width="1280" height="744" loading="lazy" alt="Locked quick search, step 1 of 2: a master password field and a next button">
+                  </picture>
+                </figure>
+                <figure class="shot"><img src="../assets/shots/quick-otp.webp" width="1280" height="744" loading="lazy" alt="Quick search, step 2 of 2: six boxes for the 6-digit phone code from the authenticator app"></figure>
+              </div>
+            </article>
+            <article class="slide wide" id="s-health" role="tabpanel" aria-labelledby="t-health" hidden>
+              <div>
+                <p class="kicker">04 · Health check</p>
+                <h3>Reused passwords, with a way to fix them</h3>
+                <p>Weak passwords and passwords used in more than one place are listed. The password row says which entry it matches, such as Slack.</p>
+                <p>The <span class="nowrap">make-a-new-password</span> button opens the editor with a fresh one. The check runs on this computer only.</p>
+              </div>
+              <figure class="shot"><img src="../assets/shots/health.webp" width="1600" height="1040" loading="lazy" alt="Health check: a card saying the same password is used in 2 places, with a make-a-new-password button; the Notion entry's password row says it matches Slack; a toast confirms the password was copied and will be cleared in 20 seconds"></figure>
+            </article>
+            <article class="slide wide" id="s-editor" role="tabpanel" aria-labelledby="t-editor" hidden>
+              <div>
+                <p class="kicker">05 · Editor</p>
+                <h3>Note how you sign in, too</h3>
+                <p>Enter the website and it suggests a title and <span class="nowrap">sign-in</span> method. Pick the site's own password and any of Google, Naver, Kakao, Apple and other providers.</p>
+                <p>The generator sits right next to the password and shows strength in bits. Fields you rarely need are folded away.</p>
+              </div>
+              <figure class="shot"><img src="../assets/shots/editor.webp" width="1600" height="1040" loading="lazy" alt="GitHub editor: website, title, username and password (very strong, 128 bits, with a generate button), sign-in method chips for username and password, Google, Naver, Kakao, Apple, GitHub, Microsoft, Facebook and custom, a folded section for more fields, and a full-width save button"></figure>
+            </article>
+          </div>
+        </div>
+        <div class="deckbar">
+          <div role="tablist" aria-label="Screens">
+            <button class="pill" type="button" role="tab" id="t-main" aria-controls="s-main" aria-selected="true">Vault</button>
+            <button class="pill" type="button" role="tab" id="t-quick" aria-controls="s-quick" aria-selected="false" tabindex="-1">Quick search</button>
+            <button class="pill" type="button" role="tab" id="t-unlock" aria-controls="s-unlock" aria-selected="false" tabindex="-1">Unlock</button>
+            <button class="pill" type="button" role="tab" id="t-health" aria-controls="s-health" aria-selected="false" tabindex="-1">Health check</button>
+            <button class="pill" type="button" role="tab" id="t-editor" aria-controls="s-editor" aria-selected="false" tabindex="-1">Editor</button>
+          </div>
+          <span class="count" data-count aria-hidden="true">01 / 05</span>
+          <div class="arrows">
+            <button type="button" data-prev aria-label="Previous screen"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></button>
+            <button type="button" data-next aria-label="Next screen"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <p class="real">Real Mac app windows, filled with example data. The app UI is in Korean.</p>
+    </div>
+  </section>
+
+  <section id="start" class="tint" aria-labelledby="start-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Get started</p>
+        <h2 id="start-title">Setup takes about two minutes</h2>
+        <p>You spread three keys across your head, a sheet of paper and your phone. After that, the master password and the phone code are all you need.</p>
+      </div>
+      <div class="steps">
+        <article class="step reveal">
+          <span class="num">1</span>
+          <h3>Pick a master password</h3>
+          <p>Enter it twice. A long sentence you can remember works best. It is never stored anywhere.</p>
+          <div class="mini" aria-hidden="true">
+            <div class="field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="16" cy="12" r="4"/><path d="M12 12H3m3 0v3m3-3v2"/></svg>Master password</div>
+          </div>
+        </article>
+        <article class="step reveal">
+          <span class="num">2</span>
+          <h3>Write down the Secret Key</h3>
+          <p>Copy the Secret Key from the screen onto paper and confirm its last 4 characters. It's also saved in this computer's Keychain.</p>
+          <div class="mini" aria-hidden="true">
+            <div class="meta">Example Secret Key</div>
+            <div class="key">SV1-AEBAG-BAFAY-DQQCI-KBMGA-2DQPCA</div>
+          </div>
+        </article>
+        <article class="step reveal">
+          <span class="num">3</span>
+          <h3>Add your phone</h3>
+          <p>Scan the QR code with an authenticator app, such as Google or Microsoft Authenticator, and enter the <span class="nowrap">6-digit</span> code.</p>
+          <div class="mini" aria-hidden="true">
+            <div class="meta"><span class="nowrap">6-digit</span> phone code</div>
+            <div class="boxes"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </article>
+      </div>
+      <div class="callout reveal" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.01"/></svg>
+        <p><strong>Keep the Secret Key paper and the OTP key away from the computer.</strong> They're the only way back in after you change computers or lose your phone. Write the <span class="nowrap">4-letter</span> OTP key groups shown next to the QR code on the same sheet, and you can add it to any authenticator app later.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Features</p>
+        <h2 id="features-title">Close the window, the shortcut still works</h2>
+        <p>Keystead keeps running after you close its window: in the Dock on a Mac, in the notification area on Windows. To quit, press <kbd>⌘Q</kbd> on a Mac or use the tray icon on Windows.</p>
+      </div>
+      <div class="panel reveal">
+        <div class="panes">
+          <figure class="pane">
+            <div class="pane-head"><span>Find and copy</span><kbd>⇧⌥Space</kbd></div>
+            <div class="gif"><img src="../assets/gifs/quick-search.gif" width="1280" height="960" loading="lazy" onerror="this.onerror=null;this.src='../assets/shots/quick.webp'" alt="Opening quick search: the shortcut brings up a small window, a few typed letters narrow the results, and Return copies the password"></div>
+            <figcaption>Type a few letters, press <kbd>↵</kbd>, done. <kbd>⌘B</kbd> copies the username and <kbd>⌘O</kbd> the <span class="nowrap">one-time</span> code.</figcaption>
+          </figure>
+          <figure class="pane">
+            <div class="pane-head"><span>Open while locked</span><span>Mac 0.7.0+ · Windows 0.8.0+</span></div>
+            <div class="gif"><img src="../assets/gifs/quick-unlock.gif" width="1280" height="960" loading="lazy" onerror="this.onerror=null;this.src='../assets/shots/quick-locked.webp'" alt="Quick search on a locked vault: the same window takes the master password and the phone code, then switches to search"></div>
+            <figcaption>If the vault is locked, unlock it in the same window and carry on searching.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="bento">
+        <article class="tile reveal">
+          <div class="art fill"><img src="../assets/shots/touchid-only.webp" width="1600" height="1040" loading="lazy" alt="Settings page for Touch ID only: it asks whether to open with just a fingerprint and no phone code, explains that the phone code is still asked after a master password unlock, a restart or 3 days, and asks for the master password to turn it on"></div>
+          <div class="copy"><h3>Touch ID and Windows Hello</h3><p>Turn it on in settings and open with a fingerprint instead of the password. Windows Hello also takes face or PIN. After 3 days or a restart, the password is asked again. With “Touch ID only” on, the phone code is skipped too. It's off by default.</p></div>
+        </article>
+        <article class="tile reveal">
+          <div class="art fill"><img src="../assets/shots/lock.webp" width="1600" height="1040" loading="lazy" alt="Lock screen: the Keystead logo, a master password field and an unlock button, with notes at the bottom that it doesn't use the internet and opens with the password, Secret Key and phone code"></div>
+          <div class="copy"><h3>Locks when you step away</h3><p>It locks on sleep, screen lock and user switch, after the idle time you choose (1, 5, 15, 30 or 60 minutes), and always 12 hours after unlocking. <kbd>⌘L</kbd> locks it now.</p></div>
+        </article>
+        <article class="tile reveal">
+          <div class="art" aria-hidden="true">
+            <div>
+              <div class="chips"><span class="on">All</span><span><i style="background:#2563eb"></i>Work</span><span><i style="background:#16a34a"></i>Personal</span><span><i style="background:#9333ea"></i>Other</span></div>
+              <div class="chips"><span><kbd>⌘0</kbd></span><span><kbd>⌘1</kbd>–<kbd>⌘9</kbd></span></div>
+            </div>
+          </div>
+          <div class="copy"><h3>Split it into spaces</h3><p>Work, Personal, Other or your own, each with a name and color you choose. Switch with <kbd>⌘1</kbd>–<kbd>⌘9</kbd>.</p></div>
+        </article>
+        <article class="tile reveal">
+          <div class="art" aria-hidden="true">
+            <div class="offline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><path d="M12 19h.01"/><path d="M3 3l18 18"/></svg>
+              <b>No internet</b>
+              <div class="nots"><span>account</span><span>server</span><span>analytics</span><span>crash reports</span><span>update check</span><span>ads</span></div>
+            </div>
+          </div>
+          <div class="copy"><h3>Collects nothing</h3><p>Neither app has code that connects to the internet. Your browser opens a site only when you click open on an entry.</p></div>
+        </article>
+      </div>
+
+      <details class="fold reveal">
+        <summary>All shortcuts</summary>
+        <div class="inner">
+          <div class="scroll-x">
+            <table class="t">
+              <thead><tr><th scope="col">Action</th><th scope="col">macOS</th><th scope="col">Windows</th></tr></thead>
+              <tbody>
+                <tr><td>Quick search (from any app)</td><td><kbd>⇧⌥Space</kbd></td><td><kbd>Alt+Shift+Space</kbd></td></tr>
+                <tr><td>Search box</td><td><kbd>⌘F</kbd></td><td><kbd>Ctrl+F</kbd></td></tr>
+                <tr><td>All / space 1–9</td><td><kbd>⌘0</kbd> / <kbd>⌘1</kbd>–<kbd>⌘9</kbd></td><td><kbd>Ctrl+0</kbd> / <kbd>Ctrl+1</kbd>–<kbd>Ctrl+9</kbd></td></tr>
+                <tr><td>Copy password</td><td><kbd>⇧⌘C</kbd> or <kbd>↵</kbd></td><td><kbd>Ctrl+Shift+C</kbd> or <kbd>Enter</kbd></td></tr>
+                <tr><td>Copy username</td><td><kbd>⌘B</kbd></td><td><kbd>Ctrl+B</kbd></td></tr>
+                <tr><td>New · edit</td><td><kbd>⌘N</kbd> · <kbd>⌘E</kbd></td><td><kbd>Ctrl+N</kbd> · <kbd>Ctrl+E</kbd></td></tr>
+                <tr><td>Save in the editor</td><td><kbd>⌘↵</kbd></td><td><kbd>Ctrl+Enter</kbd></td></tr>
+                <tr><td>Lock now</td><td><kbd>⌘L</kbd></td><td><kbd>Ctrl+L</kbd></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="security" class="tint" aria-labelledby="security-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Security</p>
+        <h2 id="security-title">A leaked file won't open</h2>
+        <p>The key only comes out when the master password and the Secret Key are both there. The app also checks the phone code before it shows anything.</p>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <div class="diagram">
+          <picture>
+            <source data-dark srcset="../assets/shots/diagram-encryption-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="../assets/shots/diagram-encryption.webp" width="2400" height="1280" loading="lazy" alt="How the vault opens: the master password is stretched with Argon2id, combined with the Secret Key through HKDF-SHA256 into a lock key, which unwraps the random 256-bit vault key that decrypts the AES-256-GCM contents. The app checks the phone code first. Taking the file, editing it, or swapping in an older copy either fails or raises a warning">
+          </picture>
+        </div>
+        <figcaption class="real">Diagram labels are in Korean, like the app.</figcaption>
+        <figcaption class="swipe">Swipe the diagram sideways</figcaption>
+      </figure>
+      <div class="guard">
+        <div class="box card-bg reveal">
+          <h3>What it defends against</h3>
+          <div class="scroll-x">
+            <table class="t">
+              <tbody>
+                <tr><td>Password guessing</td><td>Argon2id costs 512 MiB of memory and about 0.6 s per guess (Apple M series).</td></tr>
+                <tr><td>Leaked file</td><td>The <span class="nowrap">128-bit</span> Secret Key goes into the key with the password, so even a weak password can't be <span class="nowrap">brute-forced.</span></td></tr>
+                <tr><td>Reading contents</td><td>AES-256-GCM over everything, titles, URLs, notes and space names included.</td></tr>
+                <tr><td>Tampering</td><td>Change one byte and the file won't open.</td></tr>
+                <tr><td>Rollback</td><td>A save counter is also kept in the Keychain; an older file brings up a warning.</td></tr>
+                <tr><td>Leaked password</td><td>Changing the master password also makes a new vault key, and restore points that open with the old password are deleted.</td></tr>
+                <tr><td>Repeated failures</td><td>From the 3rd failure, the wait doubles each time, up to 15 minutes.</td></tr>
+                <tr><td>Clipboard</td><td>Cleared after the set time and flagged so clipboard history skips it.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Saved files are also scanned for leftover plaintext. Vaults written by the Mac, Windows and Python code all pass.</p>
+        </div>
+        <div class="box cant reveal">
+          <h3>What it can't stop</h3>
+          <ul>
+            <li>A computer already taken over by malware (keyloggers, programs that read memory)</li>
+            <li>An unlocked computer left unattended</li>
+            <li>Other apps reading the clipboard during the few seconds a value is there</li>
+            <li><strong>The phone code is a check inside the app, not encryption.</strong> Someone with the file, the password and the Secret Key could open the vault with their own program. Against a leaked file, the Secret Key is the real second factor.</li>
+            <li><strong>Touch ID and Windows Hello are a convenience.</strong> Another program running as you can ask for your fingerprint too. Windows Hello includes the Windows PIN, so with “Windows Hello only” on, the PIN alone opens the vault.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="more">
+        <a class="btn ghost card-bg" href="https://github.com/leeahwi/keystead/blob/main/README.en.md#how-it-protects-you">Details in the README <span class="ext" aria-hidden="true">↗</span></a>
+        <a class="btn ghost card-bg" href="https://github.com/leeahwi/keystead/blob/main/SECURITY.md">Security policy <span class="ext" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="backup" aria-labelledby="backup-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Backup, move, restore</p>
+        <h2 id="backup-title">The vault is one file</h2>
+        <p>So backing up, moving and restoring all come down to handling that file.</p>
+      </div>
+      <div class="panel reveal" data-tabs>
+        <div class="panel-top">
+          <div role="tablist" aria-label="Backup, move, restore">
+            <button class="pill" type="button" role="tab" id="b-where" aria-controls="p-where" aria-selected="true">What's where</button>
+            <button class="pill" type="button" role="tab" id="b-backup" aria-controls="p-backup" aria-selected="false" tabindex="-1">Backup</button>
+            <button class="pill" type="button" role="tab" id="b-move" aria-controls="p-move" aria-selected="false" tabindex="-1">Move</button>
+            <button class="pill" type="button" role="tab" id="b-restore" aria-controls="p-restore" aria-selected="false" tabindex="-1">Restore</button>
+            <button class="pill" type="button" role="tab" id="b-lost" aria-controls="p-lost" aria-selected="false" tabindex="-1">Lost something</button>
+          </div>
+        </div>
+        <div class="tabpanel" id="p-where" role="tabpanel" aria-labelledby="b-where">
+          <h3 class="tab-title">What's where</h3>
+          <div class="diagram"><picture><source data-dark srcset="../assets/shots/diagram-where-dark.webp" media="(prefers-color-scheme: dark)"><img src="../assets/shots/diagram-where.webp" width="2400" height="940" loading="lazy" alt="What's where: the master password in your head, the Secret Key on one sheet of paper, the authenticator on your phone. On this computer: the Keystead app, the locked vault file, 10 backups and the Keychain. No server, account or sync; a locked copy goes to a USB stick or cloud folder only when you copy it there"></picture></div>
+          <p>The keys are split between your head, paper and phone. The vault file lives only on this computer, and a locked copy goes to a USB stick or cloud folder only when you put it there.</p>
+        </div>
+        <div class="tabpanel" id="p-backup" role="tabpanel" aria-labelledby="b-backup" hidden>
+          <h3 class="tab-title">Backup</h3>
+          <div class="diagram"><picture><source data-dark srcset="../assets/shots/diagram-backup-dark.webp" media="(prefers-color-scheme: dark)"><img src="../assets/shots/diagram-backup.webp" width="2400" height="660" loading="lazy" alt="Two things to back up: the vault file (vault.svlt, always locked, so any USB stick, disk or cloud folder is fine) and the Secret Key paper (kept somewhere else). The app also keeps the previous 10 versions in a backups folder on every save"></picture></div>
+          <p>Back up two things: the vault file and the Secret Key paper. The file is always encrypted, so any USB stick, disk or cloud folder will do. Settings can save a copy wherever you choose.</p>
+          <p>The file is at <code>~/.securevault/vault.svlt</code> on a Mac and <code>%USERPROFILE%\.securevault\vault.svlt</code> on Windows.</p>
+        </div>
+        <div class="tabpanel" id="p-move" role="tabpanel" aria-labelledby="b-move" hidden>
+          <h3 class="tab-title">Move to another computer</h3>
+          <div class="diagram"><picture><source data-dark srcset="../assets/shots/diagram-move-dark.webp" media="(prefers-color-scheme: dark)"><img src="../assets/shots/diagram-move.webp" width="2400" height="620" loading="lazy" alt="Moving in four steps: 1 copy vault.svlt from the old computer to a USB stick or cloud folder. 2 install Keystead on the new computer without opening it. 3 put vault.svlt into .securevault in your home folder. 4 open it and enter the Secret Key, master password and phone code"></picture></div>
+          <p>Install Keystead on the new computer but don't open it yet; opening it first starts a new vault. Put the file into <code>.securevault</code> in your home folder, then open the app. Mac to Windows works the same way.</p>
+        </div>
+        <div class="tabpanel" id="p-restore" role="tabpanel" aria-labelledby="b-restore" hidden>
+          <h3 class="tab-title">Restore an earlier version</h3>
+          <div class="diagram"><picture><source data-dark srcset="../assets/shots/diagram-restore-dark.webp" media="(prefers-color-scheme: dark)"><img src="../assets/shots/diagram-restore.webp" width="2400" height="720" loading="lazy" alt="Two ways to restore. In the app: Settings, go back to an earlier state, pick a version by save number and time, enter the master password it was saved with. If the app won't open: quit Keystead, move the current vault.svlt aside, copy the version you want from backups to vault.svlt, and choose open anyway on the old-file warning"></picture></div>
+          <p>In settings, pick a version by save number and time. Only entries and spaces go back; the version you replaced stays in the backups.</p>
+          <p>If the old-file warning shows up when you haven't restored anything, someone may have swapped the file. Choose not to open it and check the file.</p>
+        </div>
+        <div class="tabpanel" id="p-lost" role="tabpanel" aria-labelledby="b-lost" hidden>
+          <h3 class="tab-title">If you lose something</h3>
+          <div class="diagram"><picture><source data-dark srcset="../assets/shots/diagram-lost-dark.webp" media="(prefers-color-scheme: dark)"><img src="../assets/shots/diagram-lost.webp" width="2400" height="660" loading="lazy" alt="If you lose something: the Secret Key paper can be written again from the emergency kit in settings while you still have the computer. A lost computer is replaced like a move, with the paper and a file backup. A new phone is enrolled from the old one; a lost phone is fine if you wrote down the OTP key. The master password can't be recovered"></picture></div>
+          <p>The master password can't be recovered. Nothing is handed to anyone else, so if you lose it, not even the developer can help.</p>
+        </div>
+      </div>
+      <p class="real">Diagram labels are in Korean, like the app.</p>
+      <p class="swipe">Swipe the diagrams sideways</p>
+    </div>
+  </section>
+
+  <section id="faq" class="tint" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details><summary>Can I use it on both Mac and Windows?</summary><p>Both apps open the same vault file. There's no sync, though, so you move the file yourself. Changes made to the same vault on two computers aren't merged.</p></details>
+        <details><summary>Why does the OS warn me the first time?</summary><p>The builds aren&#39;t notarized by Apple or signed for Windows yet. Every release's file hashes are signed instead, so you can check your download yourself; see below.</p></details>
+        <details><summary>Has the Windows app been tested?</summary><p>It's built and format-checked on Windows CI runners, but it hasn't run on a real Windows PC yet. The same goes for the 0.8.0 quick search window and Windows Hello. If something looks off, please <a href="https://github.com/leeahwi/keystead/issues">open an issue</a>.</p></details>
+        <details><summary>How do I hear about new versions?</summary><p>The app never checks for updates. New versions and their notes appear on the <a href="https://github.com/leeahwi/keystead/releases">releases page</a>. The vault file format didn't change in 0.8.0.</p></details>
+        <details><summary>What language is the app in?</summary><p>Korean. This page and the README are also in English.</p></details>
+        <details><summary>How do I remove everything?</summary><p>Delete the app, the <code>.securevault</code> folder in your home folder, and the <code>securevault</code> items in Keychain Access (Credential Manager on Windows). If you also destroy the emergency kit paper, that vault can't be opened again.</p></details>
+        <details><summary>I found a security problem</summary><p>Please report it privately to the repository owner rather than in a public issue, since others could use it before it's fixed. You'll hear back within 7 days, and a fix ships within 90 days at the latest. Never send real passwords, Secret Keys or vault files. See the <a href="https://github.com/leeahwi/keystead/blob/main/SECURITY.md">security policy</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="final" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 id="download-title">Make a vault on your own computer</h2>
+        <p class="lede">You'll be set up in about three minutes. The builds aren't code-signed yet, so the OS blocks the first launch once.</p>
+      </div>
+      <div class="downloads">
+        <div class="dl reveal">
+          <h3>Mac</h3>
+          <p class="meta">0.9.0 · macOS 14+ · <code>Keystead-v0.9.0-macOS.dmg</code></p>
+          <ol>
+            <li>Open the DMG and drag <strong>Keystead</strong> to Applications.</li>
+            <li>In Finder, right-click Keystead and choose <strong>Open</strong>. You only do this once.</li>
+          </ol>
+          <a class="btn primary" href="https://github.com/leeahwi/keystead/releases/latest">Download for Mac</a>
+        </div>
+        <div class="dl reveal">
+          <h3>Windows</h3>
+          <p class="meta">0.9.0 · Windows 10/11 · <code>Keystead_0.9.0_x64-setup.exe</code></p>
+          <ol>
+            <li>Run <code>setup.exe</code>.</li>
+            <li>If SmartScreen appears, click <strong>More info → Run anyway</strong>.</li>
+          </ol>
+          <p class="warnline">Not yet tested on a real Windows PC.</p>
+          <a class="btn primary" href="https://github.com/leeahwi/keystead/releases/latest">Download for Windows</a>
+        </div>
+      </div>
+      <details class="fold reveal">
+        <summary>Check that the download is genuine (recommended)</summary>
+        <div class="inner">
+          <p>Someone could <span class="nowrap">re-upload</span> Keystead with malware inside, so every release ships <code>SHA256SUMS</code> and its signature <code>SHA256SUMS.sig</code>. Put the downloaded files in one folder and run the repository's <a href="https://github.com/leeahwi/keystead/tree/main/scripts">check script</a>.</p>
+          <pre><code>scripts/verify-release.sh ~/Downloads/keystead-v0.9.0</code></pre>
+          <pre><code>powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.0</code></pre>
+          <p>If it prints <code>모두 확인했습니다</code> (all verified), the files are genuine. It fails when the version written in the signed list differs from the folder name (<code>keystead-v0.9.0</code>), so an older release can't pass as the latest; the public keys are in <a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">.github/release-signing</a>.</p>
+          <div class="scroll-x">
+            <table class="t keys">
+              <thead><tr><th scope="col">Key</th><th scope="col">Fingerprint</th><th scope="col">Used for</th></tr></thead>
+              <tbody>
+                <tr><td>Laptop Secure Enclave key</td><td><code>SHA256:AQwd7gTjutxsdxShSYdAQoP+qquJb1K7X8AofRSubAU</code></td><td>v0.8.0 on</td></tr>
+                <tr><td>Previous laptop key</td><td><code>SHA256:U6EENbTlPu90iiZSQjBSImelxY60hD9BujDdZLhk8E8</code></td><td>v0.5.3 – v0.7.0 · not accepted from 2026-11-06</td></tr>
+                <tr><td>CI key</td><td><code>SHA256:haNkzmNl/aFJ/FKWVIBcqGHoHASlxSDlGGcNnhb8HbA</code></td><td>Was for GitHub Actions builds · not accepted from 2026-11-09</td></tr>
+                <tr><td>Previous key</td><td><code>SHA256:FjJfSvHqxzn5u+Z4cipjFMkOqINdKrHPBrIj8wC6HVY</code></td><td>v0.2.2 – v0.5.2 · not accepted from 2026-11-06</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The Secure Enclave key never leaves the Mac's security chip, and every signature needs Touch ID. Don't open a Keystead you got from a messenger or any site other than this repository.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="about">
+        <a class="brand" href="./"><img src="../assets/logo.svg" alt="" width="30" height="30" loading="lazy">Keystead</a>
+        <p>A password vault that stays on your computer. macOS and Windows.</p>
+      </div>
+      <div>
+        <h4>App</h4>
+        <ul>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#start">Get started</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/releases">Release notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Docs</h4>
+        <ul>
+          <li><a href="https://github.com/leeahwi/keystead/blob/main/README.en.md">README</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/blob/main/README.en.md#backup-move-restore">Backup, move, restore</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/blob/main/SECURITY.md">Security policy</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">Release signing keys</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/leeahwi/keystead">GitHub repository</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/releases">Releases</a></li>
+          <li><a href="https://github.com/leeahwi/keystead/issues">Issues</a></li>
+          <li><a href="../" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>The app is licensed under the <a href="https://github.com/leeahwi/keystead/blob/main/LICENSE">Apache License 2.0</a></span>
+      <span>Mac · Windows 0.9.0</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
