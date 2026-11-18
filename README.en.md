@@ -57,17 +57,18 @@ No server, no account, no sync. The Mac and Windows apps open the same vault fil
 Someone could re-upload Keystead with malware inside, so every release ships `SHA256SUMS` and its signature `SHA256SUMS.sig`. Put the downloaded files in one folder, get this repository (**Code → Download ZIP** or `git clone`), and run:
 
 ```sh
-scripts/verify-release.sh ~/Downloads/keystead-v0.9.0
+scripts/verify-release.sh ~/Downloads/keystead-v0.9.1
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.0
+powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.1
 ```
 
-If it prints `모두 확인했습니다` (all verified), the files are genuine. A file it couldn't check, or one that isn't in the list, makes it fail. From v0.9.0 the signed list also carries the version, so it fails when that differs from the folder name (`keystead-v0.9.0`) or the version you pass as the second argument: an older release can't be passed off as the latest. Public keys are in [.github/release-signing/](.github/release-signing/):
+If it prints `모두 확인했습니다` (all verified), the files are genuine. A file it couldn't check, or one that isn't in the list, makes it fail. From v0.9.0 the signed list also carries the version, so it fails when that differs from the folder name (`keystead-v0.9.1`) or the version you pass as the second argument: an older release can't be passed off as the latest. Public keys are in [.github/release-signing/](.github/release-signing/):
 
 | Key | Fingerprint | Releases |
 | --- | --- | --- |
+| Second Mac Secure Enclave key | `SHA256:nOJ0nwGmV/QysocCznw0uqqtTh7auiAS8fI6Rl6gHyQ` | v0.9.1 on. Same setup as the laptop key, in another developer Mac's Secure Enclave |
 | Laptop Secure Enclave key | `SHA256:AQwd7gTjutxsdxShSYdAQoP+qquJb1K7X8AofRSubAU` | v0.8.0 on. The key never leaves the developer's Mac Secure Enclave and every signature needs Touch ID |
 | Previous laptop key | `SHA256:U6EENbTlPu90iiZSQjBSImelxY60hD9BujDdZLhk8E8` | v0.5.3 – v0.7.0. Not accepted from 2026-11-06 |
 | CI key | `SHA256:haNkzmNl/aFJ/FKWVIBcqGHoHASlxSDlGGcNnhb8HbA` | Was for GitHub Actions builds. Not accepted from 2026-11-09 |

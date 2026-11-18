@@ -58,7 +58,7 @@
       <div class="cta">
         <a class="btn primary" href="https://github.com/leeahwi/keystead/releases/latest">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>
-          내려받기 <small>0.9.0</small>
+          내려받기 <small>0.9.1</small>
         </a>
         <div class="line" role="img" aria-label="빠른 검색 예: 어느 앱에서든 ⇧⌥Space를 누르고 ‘git’을 치면, ↵ 한 번으로 GitHub 비밀번호가 복사돼요" data-line='[["git","GitHub 비밀번호 복사 ↵"],["aws","AWS 콘솔 비밀번호 복사 ↵"],["fig","Figma 비밀번호 복사 ↵"]]'>
           <kbd aria-hidden="true">⇧⌥Space</kbd>
@@ -414,7 +414,7 @@
       <div class="downloads">
         <div class="dl reveal">
           <h3>Mac</h3>
-          <p class="meta">0.9.0 · macOS 14 이상 · <code>Keystead-v0.9.0-macOS.dmg</code></p>
+          <p class="meta">0.9.1 · macOS 14 이상 · <code>Keystead-v0.9.1-macOS.dmg</code></p>
           <ol>
             <li>DMG를 열고 <strong>Keystead</strong>를 응용 프로그램 폴더로 끌어다 놓아요.</li>
             <li>Finder에서 Keystead를 <strong>우클릭 → 열기</strong>를 눌러요. 처음 한 번만 하면 돼요.</li>
@@ -423,7 +423,7 @@
         </div>
         <div class="dl reveal">
           <h3>Windows</h3>
-          <p class="meta">0.9.0 · Windows 10/11 · <code>Keystead_0.9.0_x64-setup.exe</code></p>
+          <p class="meta">0.9.1 · Windows 10/11 · <code>Keystead_0.9.1_x64-setup.exe</code></p>
           <ol>
             <li><code>setup.exe</code>를 실행해요.</li>
             <li>SmartScreen이 뜨면 <strong>추가 정보 → 실행</strong>을 눌러요.</li>
@@ -436,13 +436,14 @@
         <summary>받은 파일이 진짜인지 확인하기(권장)</summary>
         <div class="inner">
           <p>누군가 악성코드를 넣은 Keystead를 다른 곳에 올릴 수 있어서, 릴리스마다 파일 해시 목록 <code>SHA256SUMS</code>와 그 서명 <code>SHA256SUMS.sig</code>를 함께 올려요. 받은 파일을 한 폴더에 모으고 저장소의 <a href="https://github.com/leeahwi/keystead/tree/main/scripts">확인 스크립트</a>를 실행해 보세요.</p>
-          <pre><code>scripts/verify-release.sh ~/Downloads/keystead-v0.9.0</code></pre>
-          <pre><code>powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.0</code></pre>
-          <p><code>모두 확인했습니다</code>가 나오면 진짜예요. 서명된 목록에 적힌 버전이 폴더 이름(<code>keystead-v0.9.0</code>)과 다르면 실패해서, 예전 판을 최신이라고 속일 수 없어요. 공개 키는 <a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">.github/release-signing</a>에 있어요.</p>
+          <pre><code>scripts/verify-release.sh ~/Downloads/keystead-v0.9.1</code></pre>
+          <pre><code>powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.1</code></pre>
+          <p><code>모두 확인했습니다</code>가 나오면 진짜예요. 서명된 목록에 적힌 버전이 폴더 이름(<code>keystead-v0.9.1</code>)과 다르면 실패해서, 예전 판을 최신이라고 속일 수 없어요. 공개 키는 <a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">.github/release-signing</a>에 있어요.</p>
           <div class="scroll-x">
             <table class="t keys">
               <thead><tr><th scope="col">키</th><th scope="col">지문</th><th scope="col">쓰는 판</th></tr></thead>
               <tbody>
+                <tr><td>두 번째 Mac 보안 칩 키</td><td><code>SHA256:nOJ0nwGmV/QysocCznw0uqqtTh7auiAS8fI6Rl6gHyQ</code></td><td>v0.9.1부터</td></tr>
                 <tr><td>노트북 보안 칩 키</td><td><code>SHA256:AQwd7gTjutxsdxShSYdAQoP+qquJb1K7X8AofRSubAU</code></td><td>v0.8.0부터</td></tr>
                 <tr><td>이전 노트북 키</td><td><code>SHA256:U6EENbTlPu90iiZSQjBSImelxY60hD9BujDdZLhk8E8</code></td><td>v0.5.3 ~ v0.7.0 · 2026-11-06부터 받지 않음</td></tr>
                 <tr><td>CI 키</td><td><code>SHA256:haNkzmNl/aFJ/FKWVIBcqGHoHASlxSDlGGcNnhb8HbA</code></td><td>GitHub Actions 빌드용 · 2026-11-09부터 받지 않음</td></tr>
@@ -494,7 +495,7 @@
     </div>
     <div class="legal">
       <span>앱은 <a href="https://github.com/leeahwi/keystead/blob/main/LICENSE">Apache License 2.0</a>을 따라요</span>
-      <span>Mac · Windows 0.9.0</span>
+      <span>Mac · Windows 0.9.1</span>
     </div>
   </div>
 </footer>

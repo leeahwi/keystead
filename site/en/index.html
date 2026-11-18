@@ -58,7 +58,7 @@
       <div class="cta">
         <a class="btn primary" href="https://github.com/leeahwi/keystead/releases/latest">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>
-          Download <small>0.9.0</small>
+          Download <small>0.9.1</small>
         </a>
         <div class="line" role="img" aria-label="Quick search example: press ⇧⌥Space in any app, type ‘git’, and ↵ copies the GitHub password" data-line='[["git","Copy GitHub password ↵"],["aws","Copy AWS console password ↵"],["fig","Copy Figma password ↵"]]'>
           <kbd aria-hidden="true">⇧⌥Space</kbd>
@@ -416,7 +416,7 @@
       <div class="downloads">
         <div class="dl reveal">
           <h3>Mac</h3>
-          <p class="meta">0.9.0 · macOS 14+ · <code>Keystead-v0.9.0-macOS.dmg</code></p>
+          <p class="meta">0.9.1 · macOS 14+ · <code>Keystead-v0.9.1-macOS.dmg</code></p>
           <ol>
             <li>Open the DMG and drag <strong>Keystead</strong> to Applications.</li>
             <li>In Finder, right-click Keystead and choose <strong>Open</strong>. You only do this once.</li>
@@ -425,7 +425,7 @@
         </div>
         <div class="dl reveal">
           <h3>Windows</h3>
-          <p class="meta">0.9.0 · Windows 10/11 · <code>Keystead_0.9.0_x64-setup.exe</code></p>
+          <p class="meta">0.9.1 · Windows 10/11 · <code>Keystead_0.9.1_x64-setup.exe</code></p>
           <ol>
             <li>Run <code>setup.exe</code>.</li>
             <li>If SmartScreen appears, click <strong>More info → Run anyway</strong>.</li>
@@ -438,13 +438,14 @@
         <summary>Check that the download is genuine (recommended)</summary>
         <div class="inner">
           <p>Someone could <span class="nowrap">re-upload</span> Keystead with malware inside, so every release ships <code>SHA256SUMS</code> and its signature <code>SHA256SUMS.sig</code>. Put the downloaded files in one folder and run the repository's <a href="https://github.com/leeahwi/keystead/tree/main/scripts">check script</a>.</p>
-          <pre><code>scripts/verify-release.sh ~/Downloads/keystead-v0.9.0</code></pre>
-          <pre><code>powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.0</code></pre>
-          <p>If it prints <code>모두 확인했습니다</code> (all verified), the files are genuine. It fails when the version written in the signed list differs from the folder name (<code>keystead-v0.9.0</code>), so an older release can't pass as the latest; the public keys are in <a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">.github/release-signing</a>.</p>
+          <pre><code>scripts/verify-release.sh ~/Downloads/keystead-v0.9.1</code></pre>
+          <pre><code>powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.1</code></pre>
+          <p>If it prints <code>모두 확인했습니다</code> (all verified), the files are genuine. It fails when the version written in the signed list differs from the folder name (<code>keystead-v0.9.1</code>), so an older release can't pass as the latest; the public keys are in <a href="https://github.com/leeahwi/keystead/tree/main/.github/release-signing">.github/release-signing</a>.</p>
           <div class="scroll-x">
             <table class="t keys">
               <thead><tr><th scope="col">Key</th><th scope="col">Fingerprint</th><th scope="col">Used for</th></tr></thead>
               <tbody>
+                <tr><td>Second Mac Secure Enclave key</td><td><code>SHA256:nOJ0nwGmV/QysocCznw0uqqtTh7auiAS8fI6Rl6gHyQ</code></td><td>v0.9.1 on</td></tr>
                 <tr><td>Laptop Secure Enclave key</td><td><code>SHA256:AQwd7gTjutxsdxShSYdAQoP+qquJb1K7X8AofRSubAU</code></td><td>v0.8.0 on</td></tr>
                 <tr><td>Previous laptop key</td><td><code>SHA256:U6EENbTlPu90iiZSQjBSImelxY60hD9BujDdZLhk8E8</code></td><td>v0.5.3 – v0.7.0 · not accepted from 2026-11-06</td></tr>
                 <tr><td>CI key</td><td><code>SHA256:haNkzmNl/aFJ/FKWVIBcqGHoHASlxSDlGGcNnhb8HbA</code></td><td>Was for GitHub Actions builds · not accepted from 2026-11-09</td></tr>
@@ -496,7 +497,7 @@
     </div>
     <div class="legal">
       <span>The app is licensed under the <a href="https://github.com/leeahwi/keystead/blob/main/LICENSE">Apache License 2.0</a></span>
-      <span>Mac · Windows 0.9.0</span>
+      <span>Mac · Windows 0.9.1</span>
     </div>
   </div>
 </footer>

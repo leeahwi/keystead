@@ -62,17 +62,18 @@
 누군가 악성코드를 넣은 Keystead를 다른 곳에 올릴 수 있어서 릴리스마다 파일 해시 목록 `SHA256SUMS`와 그 서명 `SHA256SUMS.sig`를 함께 올려요. 받은 파일을 한 폴더에 모으고 이 저장소를 받아(초록 **Code → Download ZIP** 또는 `git clone`) 확인 스크립트를 실행해 보세요.
 
 ```sh
-scripts/verify-release.sh ~/Downloads/keystead-v0.9.0
+scripts/verify-release.sh ~/Downloads/keystead-v0.9.1
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.0
+powershell -ExecutionPolicy Bypass -File scripts\verify-release.ps1 -Dir $HOME\Downloads\keystead-v0.9.1
 ```
 
-`모두 확인했습니다`가 나오면 진짜예요. 확인하지 못한 파일이나 목록에 없는 파일이 있으면 실패로 알려요. v0.9.0부터는 서명된 목록 안에 버전도 적혀 있어서, 폴더 이름(`keystead-v0.9.0`)이나 두 번째 인자로 준 버전과 다르면 실패해요. 예전 판을 최신이라고 속여 내밀 수 없어요. 공개 키는 [.github/release-signing/](.github/release-signing/)에 있어요.
+`모두 확인했습니다`가 나오면 진짜예요. 확인하지 못한 파일이나 목록에 없는 파일이 있으면 실패로 알려요. v0.9.0부터는 서명된 목록 안에 버전도 적혀 있어서, 폴더 이름(`keystead-v0.9.1`)이나 두 번째 인자로 준 버전과 다르면 실패해요. 예전 판을 최신이라고 속여 내밀 수 없어요. 공개 키는 [.github/release-signing/](.github/release-signing/)에 있어요.
 
 | 키 | 지문 | 쓰는 판 |
 | --- | --- | --- |
+| 두 번째 Mac 보안 칩 키 | `SHA256:nOJ0nwGmV/QysocCznw0uqqtTh7auiAS8fI6Rl6gHyQ` | v0.9.1부터. 노트북 키와 같은 방식으로, 다른 개발자 Mac의 보안 칩 안에 있어요 |
 | 노트북 보안 칩 키 | `SHA256:AQwd7gTjutxsdxShSYdAQoP+qquJb1K7X8AofRSubAU` | v0.8.0부터. 키가 개발자 Mac의 보안 칩 밖으로 나오지 않고, 서명할 때마다 Touch ID를 물어요 |
 | 이전 노트북 키 | `SHA256:U6EENbTlPu90iiZSQjBSImelxY60hD9BujDdZLhk8E8` | v0.5.3 ~ v0.7.0. 2026-11-06부터는 이 키의 서명을 받지 않아요 |
 | CI 키 | `SHA256:haNkzmNl/aFJ/FKWVIBcqGHoHASlxSDlGGcNnhb8HbA` | GitHub Actions 빌드용이었어요. 2026-11-09부터는 이 키의 서명을 받지 않아요 |

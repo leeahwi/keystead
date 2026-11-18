@@ -46,7 +46,7 @@ Keystead는 비밀번호를 다루는 앱이라 보안 문제는 다른 버그�
 릴리스마다 `SHA256SUMS`와 릴리스 키 서명(`SHA256SUMS.sig`)을 함께 올려요. 공개 키는 [.github/release-signing/](.github/release-signing/)에 있고, 지문은 [README](README.md#받은-파일이-진짜인지-확인하기-권장)에 있어요. v0.8.0부터는 개발자 Mac의 보안 칩 안에 있는 키로 서명해요. 이 키는 칩 밖으로 꺼낼 수 없고, 서명할 때마다 Touch ID를 물어요.
 
 ```sh
-scripts/verify-release.sh ~/Downloads/keystead-v0.9.0
+scripts/verify-release.sh ~/Downloads/keystead-v0.9.1
 ```
 
 ---
